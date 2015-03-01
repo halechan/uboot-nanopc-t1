@@ -70,9 +70,9 @@ mem_ctrl_asm_init:
 	ldr	r1, =0x00312640
 	str	r1, [r0, #DMC_MEMCONTROL]
 
-	ldr	r1, =0x40e01323
+	ldr	r1, =0x40801333
 	str	r1, [r0, #DMC_MEMCONFIG0]
-	ldr	r1, =0x60e01323
+	ldr	r1, =0x80801333
 	str	r1, [r0, #DMC_MEMCONFIG1]
 
 #ifdef CONFIG_IV_SIZE
@@ -97,7 +97,7 @@ mem_ctrl_asm_init:
 	str	r1, [r0, #DMC_TIMINGPOWER]
 #endif
 #ifdef MCLK_400
-	ldr	r1, =0x4046654f
+	ldr	r1, =0x6946654f
 	str	r1, [r0, #DMC_TIMINGROW] @TimingRow
 	ldr	r1, =0x46400506
 	str	r1, [r0, #DMC_TIMINGDATA] @TimingData
@@ -212,9 +212,9 @@ mem_ctrl_asm_init:
 	ldr	r1, =0x00312640
 	str	r1, [r0, #DMC_MEMCONTROL]
 
-	ldr	r1, =0x40e01323			@Interleaved?
+	ldr	r1, =0x40801333			@Interleaved?
 	str	r1, [r0, #DMC_MEMCONFIG0]
-	ldr	r1, =0x60e01323
+	ldr	r1, =0x80801333
 	str	r1, [r0, #DMC_MEMCONFIG1]
 
 #ifdef CONFIG_IV_SIZE
@@ -239,7 +239,7 @@ mem_ctrl_asm_init:
 	str	r1, [r0, #DMC_TIMINGPOWER]
 #endif
 #ifdef MCLK_400
-	ldr	r1, =0x4046654f
+	ldr	r1, =0x6946654f
 	str	r1, [r0, #DMC_TIMINGROW] @TimingRow
 	ldr	r1, =0x46400506
 	str	r1, [r0, #DMC_TIMINGDATA] @TimingData

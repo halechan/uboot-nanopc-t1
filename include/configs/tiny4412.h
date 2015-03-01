@@ -74,9 +74,9 @@
 /* APLL : 1.3GHz */
 //#define CONFIG_CLK_ARM_1200_APLL_1300
 /* APLL : 1.4GHz */
-#define CONFIG_CLK_ARM_1200_APLL_1400
+//#define CONFIG_CLK_ARM_1200_APLL_1400
 /* APLL : 1.5GHz */
-//#define CONFIG_CLK_ARM_1500_APLL_1500
+#define CONFIG_CLK_ARM_1500_APLL_1500
 
 /* bus clock: 100Mhz, DMC clock 200Mhz */
 //#define CONFIG_CLK_BUS_DMC_100_200
@@ -278,7 +278,7 @@
 #ifdef CONFIG_EVT0_STABLE
 #define CONFIG_NR_DRAM_BANKS	2
 #else
-#define CONFIG_NR_DRAM_BANKS	4
+#define CONFIG_NR_DRAM_BANKS	8
 #endif
 #define SDRAM_BANK_SIZE         0x10000000    /* 256 MB */
 #define PHYS_SDRAM_1            CONFIG_SYS_SDRAM_BASE /* SDRAM Bank #1 */
@@ -407,6 +407,7 @@
 /*
  * Ethernet Contoller driver
  */
+#define	CONFIG_CMD_NET
 #ifdef CONFIG_CMD_NET
 #define CONFIG_NET_MULTI
 
